@@ -1,3 +1,10 @@
+'export_excel.bas
+
+'Exports Points of PartBody Object to Excel
+
+'Note : Specify name of the body on line 28
+'Note : Excel has to be open and running in parallel with CATIA before executing this script 
+
 Attribute VB_Name = "export_excel"
 Sub CATMain()
 
@@ -16,6 +23,7 @@ Set hybridShapeFactory1 = part1.HybridShapeFactory
 Dim bodies1 As Bodies
 Set bodies1 = part1.Bodies
 
+'specify the body name instead of "PartBody" on line 28
 Dim body1 As Body
 Set body1 = bodies1.Item("PartBody")
 
@@ -46,5 +54,3 @@ Next
 
 'Test MsgBox part1.Parameters.Item("PartBody\Point.1\X").ValueAsString
 End Sub
-
-
